@@ -2,4 +2,5 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
+    "codeQL.createQuery.qlPackLocation": "d:\\Projects\\WebDynamic\\WebDynamic-FrontEditor",
 }

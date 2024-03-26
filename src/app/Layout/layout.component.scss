@@ -1,1 +1,10 @@
-.middle {@apply flex h-[100vh] justify-between;}
+.middle {@apply flex h-[94vh] justify-between;}
+
+.custom-collapse-gutter {@apply bg-red-500}
+.as-split-gutter {@apply bg-blue-500;}
+
+.custom-hand-gutter-icon {
+  
+    @apply bg-green-500;
+
+  }

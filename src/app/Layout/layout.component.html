@@ -1,17 +1,28 @@
 <app-top-menu></app-top-menu>
 
 <div class="middle">
-    <app-resizable-panel>
-        <app-explorer></app-explorer>
-    </app-resizable-panel>
+    <as-split [direction]="direction" gutterSize="5"  unit="percent">
 
-    <app-resizable-panel>
-        <app-editor-panel class="bg-red-500 w-full"></app-editor-panel>
-    </app-resizable-panel>
+        <div *asSplitGutter="let gutterNum = gutterNum;" class="custom-collapse-gutter">
+            <!--<div asSplitGutterDragHandle class="custom-hand-gutter-icon"></div>-->
+        </div>
+
+            <as-split-area [size]="15" [minSize]="10" [maxSize]="75"> 
+                <app-explorer></app-explorer>
+            </as-split-area>
+            
+
+            <as-split-area [size]="70" [minSize]="10" >
+                <app-editor-panel class="bg-red-500 w-full flex-1"></app-editor-panel>
+            </as-split-area>
+            
+
+            <as-split-area [size]="15" [minSize]="10" [maxSize]="75">
+                <app-inspector class="w-full"></app-inspector>
+            </as-split-area>
+        
+    </as-split>
     
-    <span class="handlebar-inspector">1</span>
-
-    <app-inspector class="w-full"></app-inspector>
 </div>
 
 <app-bottom-menu></app-bottom-menu>

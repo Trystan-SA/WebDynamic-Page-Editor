@@ -1,0 +1,7 @@
+.explorer {@apply flex bg-slate-800 text-slate-50 h-full;}
+
+.lateralMenu {
+    @apply flex flex-col justify-between w-[35px] px-1 py-1 bg-slate-700;
+    button {@apply bg-blue-400 border border-blue-500 rounded p-1 w-full h-[26px] leading-3;}
+}
+.lateralMenu>div {@apply flex  flex-col gap-1;}

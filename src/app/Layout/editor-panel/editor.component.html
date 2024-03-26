@@ -1,1 +1,11 @@
-<p>editor works!</p>
+<div class="editor">
+    <ng-template dynamicHost></ng-template>
+    <div appDynamicHost></div>
+
+    @for (element of this.contentTreeService.Content; track $index) {
+        <div class="border border-slate-500 rounded-sm p-2 cursor-grab">
+            {{element[1].options.id}}
+           <div [innerHTML]="element[1].renderHTML()"></div>
+        </div>
+    }
+</div>

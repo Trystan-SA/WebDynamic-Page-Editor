@@ -1,0 +1,9 @@
+# Opensource and Free content :
+
+- Basic Components (divs, texts, pictures, forms etc)
+
+
+# Paid - 30€
+- Advanced components (contact form, carrousel)
+- Themes
+- White brand

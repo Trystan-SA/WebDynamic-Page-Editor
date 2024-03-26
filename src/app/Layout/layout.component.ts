@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { ExplorerComponent } from './explorer/explorer.component';
 import { InspectorComponent } from './inspector/inspector.component';
 import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 import { EditorPanelComponent } from './editor-panel/editor.component';
-import { ResizablePanelComponent } from '../../components/resizable-panel/resizable-panel.component';
+import { AngularSplitModule, ISplitDirection } from 'angular-split'
 
 @Component({
     selector: 'app-layout',
@@ -15,11 +15,12 @@ import { ResizablePanelComponent } from '../../components/resizable-panel/resiza
         InspectorComponent, 
         BottomMenuComponent, 
         EditorPanelComponent,
-        ResizablePanelComponent
+        AngularSplitModule
     ],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-
+    public direction: ISplitDirection = 'horizontal'
+    collapseArea(index: number, areaToCollapseDirection: 'before' | 'after'){}
 }

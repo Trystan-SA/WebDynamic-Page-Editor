@@ -1,0 +1,5 @@
+<div class="ElementsExplorer">
+    @for (item of this.elementService.RegisteredElements; track $index) {
+        <app-elements-item [item]="item" ></app-elements-item>
+    }
+</div>
