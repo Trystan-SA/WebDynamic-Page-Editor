@@ -6,11 +6,18 @@ import { ElementRuntime } from "./ElementRuntime";
 })
 export class ContentTreeService {
     public Content: Map<string, ElementRuntime> = new Map();
+    constructor(){}
 
-    constructor(){
-        //TODO: For testing, please remove
 
-        this.Content.set('123', new ElementRuntime({id: '_TitleElement', configuration: {}})),
-        this.Content.set('456', new ElementRuntime({id: '_DivElement', configuration: {}}))
+    /** Hold last drag&drop Element ID, so it can be used for later use */
+    private DraggedElement: string | undefined
+
+    setNewDraggedElement(id: string){
+        this.DraggedElement = id
     }
+    getNewDraggedElement(): string | undefined {
+        return this.DraggedElement
+    }
+
+    
 }

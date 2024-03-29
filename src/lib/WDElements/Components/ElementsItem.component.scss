@@ -1,0 +1,4 @@
+.ElementsItem {
+    @apply w-24 border border-slate-500 rounded-sm p-2 cursor-grab;
+}
+.ElementsItem:hover {@apply brightness-105 bg-slate-700;}

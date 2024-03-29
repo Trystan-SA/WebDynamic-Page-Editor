@@ -1,11 +1,12 @@
 import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core'
 import { ElementService } from '~lib/WDElements/Element.service'
-import {ContentTreeService} from '~lib/WDElements/ContentTree.service'
+import { ContentTreeService } from '~lib/WDElements/ContentTree.service'
+import { PreviewPaneComponent } from '~lib/WDElements/Components/PreviewPane.component'
 
 @Component({
   selector: 'app-editor-panel',
   standalone: true,
-  providers: [ElementService, ContentTreeService],
+  imports: [PreviewPaneComponent],
   templateUrl: './editor.component.html',
   styleUrl: './editor.component.scss',
 })
@@ -19,7 +20,7 @@ export class EditorPanelComponent implements OnInit {
         this.changeDetectorRef.detach();
         setTimeout(() => {
            this.updateEditorViewport(); 
-        }, 500);
+        }, 200);
     }
 
     updateEditorViewport(){

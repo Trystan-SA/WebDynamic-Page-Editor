@@ -1,0 +1,10 @@
+<div 
+    class="dropzone"
+    (dragover)="DragOver($event)"
+    (dragleave)="DragLeave($event)"
+    (dragenter)="DragEnter($event)"
+    (dragend)="DragEnd($event)"
+    (drop)="Drop($event)"
+>
+<ng-content></ng-content>
+</div>

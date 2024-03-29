@@ -1,0 +1,22 @@
+
+
+@for (element of this.contentTreeService.Content; track $index) {
+    <div class="border border-slate-500 rounded-sm p-2 cursor-grab">
+       <div [innerHTML]="element[1].renderHTML()"></div>
+    </div>
+}
+
+
+<!-- Onboarding section - Make it easier for new people to import their first components -->
+@if (this.contentTreeService.Content.size === 0){
+    <div class="empty-container">
+        <app-dropzone>
+            <div class="droparea">
+                <h2>Your page is empty, create new elements or sections to get started !</h2>
+            </div>
+        </app-dropzone>
+    </div>
+}
+@else {
+    <h1>SHOW NEXT SECTION CONTAINER (offer a way for users to import another section)</h1>
+}
